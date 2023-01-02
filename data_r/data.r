@@ -166,3 +166,7 @@ str(iris)
 sd(iris$Sepal.Length)
 
 iris[iris$Sepal.Length < 5,]
+
+iris[, c(1, 2)]
+iris[2:3, c('Sepal.Width', 'Sepal.Length')]
+iris[1:2, -5]
