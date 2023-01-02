@@ -123,3 +123,16 @@ x[x >= 40]
 # Data Structure 2차원 데이터: 키,몸무게, 나이와 같이 여러 주제의 데이터 => 메트릭스,데이터프레임
 # - vector
 # - matrix
+
+m <- matrix(1:20, nrow = 4, ncol = 5)
+m
+
+m <- matrix(1:19, nrow = 4, ncol = 5)
+m #1~19하고 다시 1로돌아가는 recycle rule
+(m1 <- matrix(1:20, nrow = 4, ncol = 5))
+(m1 <- matrix(1:20, nrow = 4, ncol = 5, byrow = T))
+
+x <- 1:4
+y <- 5:8
+cbind(x, y)
+rbind(x, y)
