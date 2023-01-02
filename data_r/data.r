@@ -155,3 +155,14 @@ df <- data.frame(city, ranking)
 str(df)
 df <- data.frame(city, ranking, stringsAsFactors = F)
 str(df)
+
+#iris란 R에서 제공하는 150개의 붓꽃의 꽃받침과 꽃잎의 크기(길이, 폭)를 측정한 데이터 셋
+head(iris)#위에서부터 6개
+head(iris, 10)
+tail(iris)
+tail(iris, 3)#밑에서부터 6개
+str(iris)
+
+sd(iris$Sepal.Length)
+
+iris[iris$Sepal.Length < 5,]
