@@ -123,6 +123,7 @@ x[x >= 40]
 # Data Structure 2차원 데이터: 키,몸무게, 나이와 같이 여러 주제의 데이터 => 메트릭스,데이터프레임
 # - vector
 # - matrix
+# - data frame
 
 m <- matrix(1:20, nrow = 4, ncol = 5)
 m
@@ -147,3 +148,10 @@ x[c(2,3), c(2, 4, 5)]
 rownames(x) <- c('row1', 'row2')
 colnames(x) <- c('col1', 'col2')
 x
+
+city <- c('seoul', 'washington', 'hongkong')
+ranking <- c(1, 2, 3)
+df <- data.frame(city, ranking)
+str(df)
+df <- data.frame(city, ranking, stringsAsFactors = F)
+str(df)
