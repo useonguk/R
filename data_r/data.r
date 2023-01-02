@@ -114,3 +114,12 @@ x[x > 5 & x < 8]
 x <- 10:50
 x >= 40
 x[x >= 40]
+
+# Data Type 1차원 데이터:몸무게 데이터와 같이 단일 주제의 데이터 => 벡터
+# - numeric
+# - charater
+# - logical
+
+# Data Structure 2차원 데이터: 키,몸무게, 나이와 같이 여러 주제의 데이터 => 메트릭스,데이터프레임
+# - vector
+# - matrix
