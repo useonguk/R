@@ -136,3 +136,14 @@ x <- 1:4
 y <- 5:8
 cbind(x, y)
 rbind(x, y)
+#[행, 열]
+(x <- matrix(1:20, ncol = 5))
+x[2, 3]
+x[3,]
+x[, c(2,4)]
+x[c(2,3), c(2, 4, 5)]
+
+(x <- matrix(1:4, ncol = 2))
+rownames(x) <- c('row1', 'row2')
+colnames(x) <- c('col1', 'col2')
+x
