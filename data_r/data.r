@@ -244,9 +244,29 @@ ifelse(a > 5 && b > 10, a + b, 0) #if , else문보다 빠름
 ifelse(a > 5 || b > 30, a * b, 0)
 
 #반복문
-for (i in 1: 9){
-    for(j in 1:9){
+for (i in 1:9){
+    for (j in 1:9){
         cat(i, ' X ', j, "=", i * j, "\n") # nolint
     }
 }
 
+for (i in 1:150){
+    iris$LH <- ifelse(iris[, 1] < 5, "L", "H")
+}
+iris
+# for (i in 1:nrow(iris)) {
+#     vec[i] <- ifelse(iris$Sepal.Length < 5, "L", "H") # nolint
+# }
+# vec
+
+# iris$vec <- vec # nolint
+data(iris) # iris값 초기화
+head(iris[, 1:4])
+apply(iris[, 1:4], 2, mean) # 열단위  
+apply(iris[, -5], 1, mean)[1:10] # 행단위
+
+my_max <- function(x, y) {
+    return(ifelse(x > y, x, y))
+}
+my_max(10, 15)
+my_max(-1, -10)
