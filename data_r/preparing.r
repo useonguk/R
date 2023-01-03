@@ -21,9 +21,4 @@ m <- mean(iris$Sepal.Width)
 s <- sd(iris$Sepal.Width)
 c(m - 3 * s, m + 3 * s)
 
-
-
-
-
-
 2 / sum(1 / 100, 1 / 80)#조화평균

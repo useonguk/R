@@ -270,3 +270,51 @@ my_max <- function(x, y) {
 }
 my_max(10, 15)
 my_max(-1, -10)
+
+fav <- c('W', 'S', 'SP', 'S', 'S', 'F', 'F') #nolint
+print(fav)
+table(fav)
+length(fav)
+table(fav) / length(fav)
+round(table(fav) / length(fav), 2) * 100
+
+dt <- round(table(fav) / length(fav), 2) * 100
+barplot(dt)
+barplot(sort(dt))
+barplot(sort(dt, decreasing = T)) # nolint
+pie(sort(dt, decreasing = T)) # nolint
+# ?pie(sort(dt, decreasing = T)) # 도움말 # nolint
+
+hist(iris$Sepal.Length)
+
+#한글꺠짐은 인터넷 검색
+head(cars)
+boxplot(cars$dist, main = '자동차 제동거리') # nolint
+boxplot(iris$Petal.Length)
+?boxplot(iris$Petal.Length)
+boxplot(iris$Petal.Length, notch = T, col = 'yellow') # nolint
+
+#종류별로 그리기
+boxplot(Petal.Length ~ Species, data = iris)
+
+#산점도
+head(mtcars)
+plot(mtcars$wt, mtcars$mpg, col = 'black', pch = 3, main = '자동차 연비 산점도', xlab = '무게/t', ylab = '연비') # nolint
+plot(mtcars$wt, mtcars$mpg, col = 'black', pch = 19, main = '자동차 연비 산점도', xlab = '무게/t', ylab = '연비') # nolint
+plot(mtcars$wt, mtcars$mpg, col = 'black', pch = '.', main = '자동차 연비 산점도', xlab = '무게/t', ylab = '연비') # nolint
+
+pairs(iris[-5])
+
+plot(iris$Petal.Width, iris$Petal.Length, col = iris$Species, pch = 'O') # nolint
+
+bears <- c(5, 2, 9, 8, 3, 7, 3, 5, 3, 5)
+bal <- c(0.1, 0.03, 0.19, 0.12, 0.04, 0.095, 0.07, 0.06, 0.02, 0.05)
+length(bears)
+length(bal)
+
+df <- data.frame(bears, bal)
+head(df)
+plot(bal~bears, data = df, pch = 'O', col = 'orange') # nolint
+model <- lm(bal~bears, data = df) # nolint
+abline(model, pch = 'O', col = 'orange', lw = 2) # nolint
+cor(df$bears, df$bal) # 1에 가까울수록 상관관계가 높다.
