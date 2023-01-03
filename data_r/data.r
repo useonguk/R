@@ -181,3 +181,21 @@ tail(iris, 2)
 head(iris, 4)
 dim(iris)[1]
 dim(iris)[2]
+
+unique(iris[, 5])
+table(iris$Species)
+
+colSums(iris[, -5])
+colMeans(iris[, -5])
+rowSums((iris[, -5]))[1:2]
+rowMeans((iris[, -5]))[1:2]
+
+subset(iris, Species == "setosa")[1:5, ]
+# subset(iris[iris$Species == "setosa", ]) # nolint
+# subset(iris, Species == "setosa", ) # nolint
+subset(iris, Sepal.Length > 5.0 & Sepal.Width > 4.0)
+
+head(airquality)
+dim(airquality)
+getwd()
+write.csv(airquality, 'air.csv', row.names = F)
