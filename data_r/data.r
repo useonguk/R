@@ -170,3 +170,14 @@ iris[iris$Sepal.Length < 5,]
 iris[, c(1, 2)]
 iris[2:3, c('Sepal.Width', 'Sepal.Length')]
 iris[1:2, -5]
+
+iris[c(iris$Sepal.Length > 5), -c(1, 2)]
+
+dim(iris)
+nrow(iris)
+ncol(iris)
+colnames(iris)
+tail(iris, 2)
+head(iris, 4)
+dim(iris)[1]
+dim(iris)[2]
