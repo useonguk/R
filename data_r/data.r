@@ -192,10 +192,61 @@ rowMeans((iris[, -5]))[1:2]
 
 subset(iris, Species == "setosa")[1:5, ]
 # subset(iris[iris$Species == "setosa", ]) # nolint
-# subset(iris, Species == "setosa", ) # nolint
+# subset(iris, Species == "setosa", ) # nolint  
 subset(iris, Sepal.Length > 5.0 & Sepal.Width > 4.0)
 
 head(airquality)
 dim(airquality)
 getwd()
-write.csv(airquality, 'air.csv', row.names = F)
+write.csv(airquality, 'air.csv', row.names = F) # nolint
+
+air <- read.csv('air.csv', header = T) # nolint
+head(air)
+
+# 조건문
+
+grade <- "A"
+if (grade == "A") {
+    bonus <- 100
+}else {
+    bonus <- 50
+}
+print(bonus)
+
+score <- 85
+if (score > 90) {
+    grade <- "A"
+} else if (score > 80) {
+    grade <- "B"
+} else {
+    grade <- "C"
+}
+print(grade)
+
+a <- 10
+b <- 20
+if (a > 5 && b > 10){
+    print(a + b)
+}
+if (a > 5 || b > 30){
+    print(a * b)
+}
+
+# a <- c(10, 20, 30) # nolint
+# b <- c(20, 30, 40) # nolint
+# if (a > 5 & b > 10){
+#     print(a + b) # nolint
+# } # 오류
+
+a <- 10
+b <- 20
+ifelse(a > 5 && b > 10, a + b, 0) #if , else문보다 빠름
+ifelse(a > 5 || b > 30, a * b, 0)
+
+#반복문
+for (i in 1: 9){
+    for(j in 1:9){
+        cat(i, ' X ', j, "=", i * j, "\n") # nolint
+    }
+}
+
