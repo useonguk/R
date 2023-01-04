@@ -1,0 +1,5 @@
+install.packages('party', dependencies = T)
+library(party)
+head(party)
+model <- ctree(Species~., data = iris)
+plot(model)
