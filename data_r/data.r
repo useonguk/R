@@ -318,3 +318,7 @@ plot(bal~bears, data = df, pch = 'O', col = 'orange') # nolint
 model <- lm(bal~bears, data = df) # nolint
 abline(model, pch = 'O', col = 'orange', lw = 2) # nolint
 cor(df$bears, df$bal) # 1에 가까울수록 상관관계가 높다.
+
+month <- 1:12
+late <- c(5, 8, 7, 9, 4, 6, 12, 13, 8, 6, 6, 4)
+plot(month, late, type = 'l', lty = 5, lwd = 1, col = 'blue') # nolint
