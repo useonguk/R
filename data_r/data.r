@@ -321,4 +321,28 @@ cor(df$bears, df$bal) # 1에 가까울수록 상관관계가 높다.
 
 month <- 1:12
 late <- c(5, 8, 7, 9, 4, 6, 12, 13, 8, 6, 6, 4)
-plot(month, late, type = 'l', lty = 5, lwd = 1, col = 'blue') # nolint
+length(late)
+length(month)
+plot(month, late, type = 'l', lty = 'solid', lwd = 3, col = 'blue') # nolint
+
+month <- 1:12
+late1 <- c(5, 8, 7, 9, 4, 6, 12, 13, 8, 6, 6, 4)
+late2 <- c(7, 12, 1, 3, 7, 4, 9, 10, 5, 1, 2, 8)
+plot(month, late1, type = 'b', lty = 'dashed', lwd = 5, col = 'orange', ylim = c(1, 15)) #nolint
+lines(month, late2, lty = 'solid', col = 'skyblue', lwd = 5) # nolint
+
+# tip
+# 데이터 분석용 언어로 데이터 분석용 팁을 많이 제공
+
+moring <- rnorm(100000, mean = 7, sd = 2)
+length(moring)
+hist(moring)
+
+#표본 추출 (random)
+head(iris)
+dim(iris)
+#복원추출 중복가능성 O / 비복원추출 중복가능성 X
+index <- sample(1:NROW(iris), NROW(iris) * 0.7, replace = F)
+index
+iris[index, ] # 70%데이터
+iris[-index, ] # 30%데이터
